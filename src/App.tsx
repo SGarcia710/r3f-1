@@ -18,7 +18,7 @@ import * as THREE from 'three';
 function App() {
   return (
     <Canvas
-      dpr={1} // Pixel ratio. All devices will use 1px as pixel ratio
+      dpr={1} // Pixel ratio. All devices will use 1px as pixel ratio. we can use a an array to provide a range. i.e.: [1,2] this is the default value from R3F
       // flat //toneMapping // default tone mapping is ACESFilmicToneMapping
       // orthographic // how to use another camera
       gl={
