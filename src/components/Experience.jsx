@@ -5,6 +5,7 @@ import {
   PivotControls,
   Html,
   Text,
+  Float,
 } from '@react-three/drei';
 import * as THREE from 'three';
 
@@ -55,17 +56,19 @@ const Experience = () => {
         <meshStandardMaterial color="greenyellow" side={THREE.DoubleSide} />
       </mesh>
 
-      {/* Text (Uses Troika at the background) supports woff, ttf and otf. But the recomendation is to use woff since they are optimized for the www */}
-      <Text
-        fontSize={1}
-        color="salmon"
-        font="./bangers-v20-latin-regular.woff"
-        position-y={2}
-        maxWidth={2}
-        textAlign="center"
-      >
-        I LOVE R3F
-      </Text>
+      <Float speed={3} floatIntensity={5}>
+        {/* Text (Uses Troika at the background) supports woff, ttf and otf. But the recomendation is to use woff since they are optimized for the www */}
+        <Text
+          fontSize={1}
+          color="salmon"
+          font="./bangers-v20-latin-regular.woff"
+          position-y={2}
+          maxWidth={2}
+          textAlign="center"
+        >
+          I LOVE R3F
+        </Text>
+      </Float>
     </>
   );
 };
