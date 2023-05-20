@@ -1,7 +1,6 @@
 import './App.css';
 import { Canvas } from '@react-three/fiber';
 import Experience from './components/Experience';
-import * as THREE from 'three';
 
 /**
  * React Three Fiber handles pixel ratio automatically
