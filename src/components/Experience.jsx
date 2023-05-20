@@ -6,6 +6,7 @@ import {
   Html,
   Text,
   Float,
+  MeshReflectorMaterial,
 } from '@react-three/drei';
 import * as THREE from 'three';
 
@@ -53,7 +54,16 @@ const Experience = () => {
 
       <mesh position-y={-1} scale={10} rotation-x={-Math.PI * 0.5}>
         <planeGeometry />
-        <meshStandardMaterial color="greenyellow" side={THREE.DoubleSide} />
+        {/* <meshStandardMaterial color="greenyellow" side={THREE.DoubleSide} /> */}
+        {/* This only works for plane objects */}
+        <MeshReflectorMaterial
+          color="greenyellow"
+          side={THREE.DoubleSide}
+          resolution={512}
+          blur={[1000, 1000]}
+          mixBlur={1} // 0 no blur
+          mirror={0.75} // 1 full mirror
+        />
       </mesh>
 
       <Float speed={3} floatIntensity={5}>
