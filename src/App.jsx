@@ -33,7 +33,7 @@ function App() {
         // zoom: 100,
         near: 0.1,
         far: 200,
-        position: [3, 2, 6],
+        position: [6, 4, 15],
       }}
     >
       <Experience />

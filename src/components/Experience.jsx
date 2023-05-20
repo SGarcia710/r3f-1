@@ -4,6 +4,7 @@ import {
   TransformControls,
   PivotControls,
   Html,
+  Text,
 } from '@react-three/drei';
 import * as THREE from 'three';
 
@@ -36,7 +37,7 @@ const Experience = () => {
             position={[1, 1, 0]}
             center // with this we make the origin of the element to be at the center of the element
             distanceFactor={6} // this way we provide a factor to handle perspective. So it gets smaller when we are away, and bigger when we are close
-            occlude={[sphereRef, cubeRef]}
+            // occlude={[sphereRef, cubeRef]}
           >
             This is a sphere
           </Html>
@@ -53,6 +54,18 @@ const Experience = () => {
         <planeGeometry />
         <meshStandardMaterial color="greenyellow" side={THREE.DoubleSide} />
       </mesh>
+
+      {/* Text (Uses Troika at the background) supports woff, ttf and otf. But the recomendation is to use woff since they are optimized for the www */}
+      <Text
+        fontSize={1}
+        color="salmon"
+        font="./bangers-v20-latin-regular.woff"
+        position-y={2}
+        maxWidth={2}
+        textAlign="center"
+      >
+        I LOVE R3F
+      </Text>
     </>
   );
 };
