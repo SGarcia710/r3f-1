@@ -9,10 +9,55 @@ import {
   MeshReflectorMaterial,
 } from '@react-three/drei';
 import * as THREE from 'three';
+import { useControls, button } from 'leva';
 
 const Experience = () => {
   const cubeRef = useRef();
   const sphereRef = useRef();
+  const { position, color, visible } = useControls(
+    'sphere',
+    {
+      position: {
+        value: {
+          x: -2,
+          y: 0,
+        },
+        step: 0.01,
+        joystick: 'invertY',
+      },
+      color: '#ff0044',
+      visible: true,
+      myInterval: {
+        min: 0,
+        max: 10,
+        value: [4, 5],
+      },
+      clickMe: button(() => {
+        console.log('testing people');
+      }),
+      options: {
+        options: ['a', 'b', 'c', 'd'],
+      },
+    },
+    {
+      collapsed: true,
+    }
+  );
+
+  const { scale } = useControls(
+    'cube',
+    {
+      scale: {
+        value: 1.5,
+        step: 0.01,
+        min: 0,
+        max: 5,
+      },
+    },
+    {
+      collapsed: true,
+    }
+  );
 
   return (
     <>
@@ -31,9 +76,13 @@ const Experience = () => {
         scale={100} //pixel scaling
         fixed // fix the size of the controls. With this we will need to set a size for them using scale.
       >
-        <mesh ref={sphereRef} position-x={-2}>
+        <mesh
+          ref={sphereRef}
+          position={[position.x, position.y, 0]}
+          visible={visible}
+        >
           <sphereGeometry />
-          <meshStandardMaterial color="orange" />
+          <meshStandardMaterial color={color} />
           <Html
             wrapperClass="cubeLabel"
             position={[1, 1, 0]}
@@ -46,7 +95,7 @@ const Experience = () => {
         </mesh>
       </PivotControls>
 
-      <mesh ref={cubeRef} position-x={2}>
+      <mesh ref={cubeRef} position-x={2} scale={scale}>
         <boxGeometry />
         <meshStandardMaterial color="mediumpurple" />
       </mesh>
