@@ -9,3 +9,14 @@ body,
   overflow: hidden;
   background-color: #212121;
 }
+
+.cubeLabel > div {
+  font-family: Helvetica, Arial;
+  background: #00000088;
+  padding: 12px;
+  white-space: nowrap;
+  color: white;
+  overflow: hidden;
+  border-radius: 12px;
+  user-select: none;
+}

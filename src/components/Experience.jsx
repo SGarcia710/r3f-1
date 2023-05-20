@@ -3,6 +3,7 @@ import {
   OrbitControls,
   TransformControls,
   PivotControls,
+  Html,
 } from '@react-three/drei';
 import * as THREE from 'three';
 
@@ -25,15 +26,24 @@ const Experience = () => {
         axisColors={['#9381ff', '#ff4d6d', '#7ae582']}
         depthTest={false}
         scale={100} //pixel scaling
-        fixed // fix the size of the controls. With this we will need to set a size for them using scale
+        fixed // fix the size of the controls. With this we will need to set a size for them using scale.
       >
         <mesh ref={sphereRef} position-x={-2}>
           <sphereGeometry />
           <meshStandardMaterial color="orange" />
+          <Html
+            wrapperClass="cubeLabel"
+            position={[1, 1, 0]}
+            center // with this we make the origin of the element to be at the center of the element
+            distanceFactor={6} // this way we provide a factor to handle perspective. So it gets smaller when we are away, and bigger when we are close
+            occlude={[sphereRef, cubeRef]}
+          >
+            This is a sphere
+          </Html>
         </mesh>
       </PivotControls>
 
-      <mesh ref={cubeRef} rotation-y={Math.PI * 0.25} position-x={2}>
+      <mesh ref={cubeRef} position-x={2}>
         <boxGeometry />
         <meshStandardMaterial color="mediumpurple" />
       </mesh>
