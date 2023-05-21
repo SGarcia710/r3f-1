@@ -1,0 +1,594 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 3475,
+      "max": [
+        2.8661346435546875,
+        5.266757488250732,
+        1.008355975151062
+      ],
+      "min": [
+        -2.5608115196228027,
+        -5.6744232177734375,
+        -1.008355975151062
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 41700,
+      "componentType": 5126,
+      "count": 3475,
+      "max": [
+        0.9993837475776672,
+        0.9999886751174927,
+        0.9998223781585693
+      ],
+      "min": [
+        -0.9992552399635315,
+        -0.999409556388855,
+        -0.9997278451919556
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 3475,
+      "max": [
+        0.9990592002868652,
+        0.9981018304824829
+      ],
+      "min": [
+        0.003553628921508789,
+        0.002379713812842965
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 10566,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 83400,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        6.312432289123535,
+        -0.5682743787765503,
+        6.56967830657959
+      ],
+      "min": [
+        -6.940525054931641,
+        -0.5682743787765503,
+        -6.683279037475586
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 83448,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        0.0,
+        1.0,
+        2.4605955051271167e-09
+      ],
+      "min": [
+        0.0,
+        1.0,
+        2.4605955051271167e-09
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 27800,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        0.8744137287139893,
+        0.7524117827415466
+      ],
+      "min": [
+        0.1301659345626831,
+        0.008163991384208202
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 27832,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        0.8744137287139893,
+        0.7524117827415466
+      ],
+      "min": [
+        0.1301659345626831,
+        0.008163991384208202
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 42264,
+      "componentType": 5125,
+      "count": 6,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 83496,
+      "componentType": 5126,
+      "count": 22,
+      "max": [
+        3.7414190769195557,
+        3.562251329421997,
+        3.558300495147705
+      ],
+      "min": [
+        -3.7414190769195557,
+        -0.5684676766395569,
+        -3.558300495147705
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 83760,
+      "componentType": 5126,
+      "count": 22,
+      "max": [
+        0.9874918460845947,
+        -0.15766975283622742,
+        0.9391607046127319
+      ],
+      "min": [
+        -0.9874919652938843,
+        -0.1576700061559677,
+        -0.9391607046127319
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 27864,
+      "componentType": 5126,
+      "count": 22,
+      "max": [
+        0.9901450872421265,
+        0.9915433526039124
+      ],
+      "min": [
+        0.005989938974380493,
+        0.7737224698066711
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 28040,
+      "componentType": 5126,
+      "count": 22,
+      "max": [
+        0.9901450872421265,
+        0.9915433526039124
+      ],
+      "min": [
+        0.005989938974380493,
+        0.7737224698066711
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 42288,
+      "componentType": 5125,
+      "count": 60,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 219,
+      "max": [
+        7.260000228881836
+      ],
+      "min": [
+        0.01832730323076248
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 219,
+      "max": [
+        -0.2736925184726715,
+        6.243729114532471,
+        -0.07088561356067657
+      ],
+      "min": [
+        -0.2736925184726715,
+        5.863304615020752,
+        -0.07088561356067657
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 876,
+      "componentType": 5126,
+      "count": 217,
+      "max": [
+        7.199999809265137
+      ],
+      "min": [
+        0.0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 217,
+      "max": [
+        8.364493367528069e-17,
+        1.0,
+        8.364493367528069e-17,
+        1.0
+      ],
+      "min": [
+        -8.658644749052336e-17,
+        -0.8586618304252625,
+        -8.658644749052336e-17,
+        -0.4999999403953552
+      ],
+      "type": "VEC4"
+    }
+  ],
+  "animations": [
+    {
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 4,
+            "path": "translation"
+          }
+        },
+        {
+          "sampler": 1,
+          "target": {
+            "node": 8,
+            "path": "rotation"
+          }
+        }
+      ],
+      "name": "Take 001",
+      "samplers": [
+        {
+          "input": 14,
+          "interpolation": "LINEAR",
+          "output": 15
+        },
+        {
+          "input": 16,
+          "interpolation": "LINEAR",
+          "output": 17
+        }
+      ]
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "MeganVeldt (https://sketchfab.com/MeganVeldt)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/crab-snap-dae-weaponcraft-assignment-a9c396e7e72c425ebcb4b9f5bcf599fa",
+      "title": "Crab Snap | DAE Weaponcraft Assignment"
+    },
+    "generator": "Sketchfab-15.22.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 42528,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 28216,
+      "byteOffset": 42528,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 84024,
+      "byteOffset": 70744,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1744,
+      "byteOffset": 154768,
+      "name": "floatBufferViews"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2628,
+      "byteOffset": 156512,
+      "byteStride": 12,
+      "name": "floatBufferViews"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3472,
+      "byteOffset": 159140,
+      "byteStride": 16,
+      "name": "floatBufferViews"
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 162612,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_unlit"
+  ],
+  "images": [
+    {
+      "uri": "textures/Weapon_MAT_baseColor.png"
+    },
+    {
+      "uri": "textures/Water_Effect_MAT_baseColor.png"
+    },
+    {
+      "uri": "textures/Water_Effect_MAT_emissive.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_unlit": {}
+      },
+      "name": "Weapon_MAT",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0
+      }
+    },
+    {
+      "alphaCutoff": 0.00457144250344382,
+      "alphaMode": "MASK",
+      "doubleSided": true,
+      "emissiveFactor": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissiveTexture": {
+        "index": 2
+      },
+      "extensions": {
+        "KHR_materials_unlit": {}
+      },
+      "name": "Water_Effect_MAT",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicFactor": 0.0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Weapon_Mesh_Weapon_MAT_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Water_Plane_Water_Effect_MAT_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6,
+            "TEXCOORD_1": 7
+          },
+          "indices": 8,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Water_effects_Water_Effect_MAT_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 10,
+            "POSITION": 9,
+            "TEXCOORD_0": 11,
+            "TEXCOORD_1": 12
+          },
+          "indices": 13,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "58358e7b76e34cd2b4d72017bd1e17a8.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "Object_2"
+    },
+    {
+      "children": [
+        4,
+        6,
+        8
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        5
+      ],
+      "name": "Weapon_Mesh",
+      "translation": [
+        -0.2736925184726715,
+        5.923434257507324,
+        -0.07088561356067657
+      ]
+    },
+    {
+      "mesh": 0,
+      "name": "Weapon_Mesh_Weapon_MAT_0"
+    },
+    {
+      "children": [
+        7
+      ],
+      "name": "Water_Plane",
+      "rotation": [
+        0.0,
+        0.5397749543190002,
+        0.0,
+        0.8418093323707581
+      ]
+    },
+    {
+      "mesh": 1,
+      "name": "Water_Plane_Water_Effect_MAT_0"
+    },
+    {
+      "children": [
+        9
+      ],
+      "name": "Water_effects",
+      "rotation": [
+        0.0,
+        0.008755424059927464,
+        0.0,
+        0.9999616742134094
+      ]
+    },
+    {
+      "mesh": 2,
+      "name": "Water_effects_Water_Effect_MAT_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
