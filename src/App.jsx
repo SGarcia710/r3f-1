@@ -7,6 +7,7 @@ import EnvironmentAndStaging from './components/EnvironmentAndStaging';
 import * as THREE from 'three';
 import StageScene from './components/StageScene';
 import Models from './components/Models';
+import ThreeText from './components/ThreeText';
 
 /**
  * React Three Fiber handles pixel ratio automatically
@@ -38,7 +39,7 @@ function App() {
 
   return (
     <Canvas
-      shadows
+      //shadows
       onCreated={created}
       dpr={1} // Pixel ratio. All devices will use 1px as pixel ratio. we can use a an array to provide a range. i.e.: [1,2] this is the default value from R3F
       // flat //toneMapping // default tone mapping is ACESFilmicToneMapping
@@ -56,7 +57,7 @@ function App() {
         // zoom: 100,
         near: 0.1,
         far: 200,
-        position: [0, 6, 15],
+        position: [4, -2, 6],
       }}
     >
       {/* R3F background change */}
@@ -65,8 +66,8 @@ function App() {
       {/* <Experience /> */}
       {/* <EnvironmentAndStaging /> */}
       {/* <StageScene /> */}
-      <Models />
-
+      {/* <Models /> */}
+      <ThreeText />
       {showPerf ? <Perf position="top-left" /> : null}
     </Canvas>
   );
