@@ -13,7 +13,7 @@ const TORUS_GEOMETRY = new THREE.TorusGeometry(1, 0.6, 16, 32);
 const MATCAP_MATERIAL = new THREE.MeshMatcapMaterial();
 
 const ThreeText = () => {
-  const [matCapTexture] = useMatcapTexture('7DA1BA_A4CCE8_5D7A8B_5E7C94', 256);
+  const [matCapTexture] = useMatcapTexture('660505_F2B090_DD4D37_AA1914', 256);
   const donutsGroup = useRef();
   // const donuts = useRef([]);
   // const [torusGeometry, setTorusGeometry] = useState();
