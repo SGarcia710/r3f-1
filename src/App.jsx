@@ -8,6 +8,9 @@ import * as THREE from 'three';
 import StageScene from './components/StageScene';
 import Models from './components/Models';
 import ThreeText from './components/ThreeText';
+import Portal from './components/Portal';
+import BoyRoom from './components/BoyRoom';
+import { Suspense } from 'react';
 
 /**
  * React Three Fiber handles pixel ratio automatically
@@ -39,7 +42,8 @@ function App() {
 
   return (
     <Canvas
-      //shadows
+      flat
+      shadows
       onCreated={created}
       dpr={1} // Pixel ratio. All devices will use 1px as pixel ratio. we can use a an array to provide a range. i.e.: [1,2] this is the default value from R3F
       // flat //toneMapping // default tone mapping is ACESFilmicToneMapping
@@ -53,21 +57,24 @@ function App() {
         }
       }
       camera={{
-        fov: 45, // not used for orthographic camera
+        fov: 35, // not used for orthographic camera
         // zoom: 100,
         near: 0.1,
         far: 200,
-        position: [4, -2, 6],
+        position: [5, 2, 6],
       }}
     >
       {/* R3F background change */}
-      {/* <color args={['ivory']} attach="background" /> */}
-
+      <color args={['#4E4040']} attach="background" />
       {/* <Experience /> */}
       {/* <EnvironmentAndStaging /> */}
       {/* <StageScene /> */}
       {/* <Models /> */}
-      <ThreeText />
+      {/* <ThreeText /> */}
+      {/* <Portal /> */}
+      <Suspense>
+        <BoyRoom />
+      </Suspense>
       {showPerf ? <Perf position="top-left" /> : null}
     </Canvas>
   );
