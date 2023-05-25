@@ -15,6 +15,7 @@ import PointerEvents from './components/PointerEvents';
 import PostProcessing from './components/PostProcessing';
 import Portfolio from './components/Portfolio';
 import Physics from './components/Physics';
+import Game from './components/Game';
 
 /**
  * React Three Fiber handles pixel ratio automatically
@@ -65,7 +66,7 @@ function Canvas() {
         fov: 45, // not used for orthographic camera
         near: 0.1,
         far: 200,
-        position: [4, 2, 6],
+        position: [2.5, 4, 6],
       }}
       // onPointerMissed={() => {
       //   console.log('click  outside the canvas');
@@ -85,7 +86,8 @@ function Canvas() {
       {/* <PointerEvents /> */}
       {/* <PostProcessing /> */}
       {/* <Portfolio /> */}
-      <Physics />
+      {/* <Physics /> */}
+      <Game />
       {showPerf ? <Perf position="top-left" /> : null}
     </ThreeCanvas>
   );
