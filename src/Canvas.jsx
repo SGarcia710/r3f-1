@@ -13,6 +13,7 @@ import BoyRoom from './components/BoyRoom';
 import { Suspense } from 'react';
 import PointerEvents from './components/PointerEvents';
 import PostProcessing from './components/PostProcessing';
+import Portfolio from './components/Portfolio';
 
 /**
  * React Three Fiber handles pixel ratio automatically
@@ -38,34 +39,36 @@ const created = ({ gl, scene }) => {
 };
 
 function Canvas() {
-  const { showPerf } = useControls({
-    showPerf: true,
-  });
+  // const { showPerf } = useControls({
+  //   showPerf: true,
+  // });
 
   return (
     <ThreeCanvas
       // flat
       shadows
-      onCreated={created}
-      dpr={1} // Pixel ratio. All devices will use 1px as pixel ratio. we can use a an array to provide a range. i.e.: [1,2] this is the default value from R3F
+      //onCreated={created}
+      //dpr={1} // Pixel ratio. All devices will use 1px as pixel ratio. we can use a an array to provide a range. i.e.: [1,2] this is the default value from R3F
       // flat //toneMapping // default tone mapping is ACESFilmicToneMapping
       // orthographic // how to use another camera
-      gl={{
-        antialias: false, //default true
-        // toneMapping: THREE.CineonToneMapping, // manual way to provide an specific or custom toneMapping
-        // Default color Encoding is THREE.sRGBEncoding
-        // Default renderer's background is transparent
-      }}
+      // gl={
+      //   {
+      //     // antialias: false, //default true
+      //     // toneMapping: THREE.CineonToneMapping, // manual way to provide an specific or custom toneMapping
+      //     // Default color Encoding is THREE.sRGBEncoding
+      //     // Default renderer's background is transparent
+      //   }
+      // }
       camera={{
-        fov: 45, // not used for orthographic camera
         // zoom: 100,
-        near: 0.1,
-        far: 200,
-        position: [-4, 6, 12],
+        fov: 45, // not used for orthographic camera
+        // near: 0.1,
+        // far: 2000,
+        position: [-3, 1.5, 4],
       }}
-      onPointerMissed={() => {
-        console.log('click  outside the canvas');
-      }}
+      // onPointerMissed={() => {
+      //   console.log('click  outside the canvas');
+      // }}
     >
       {/* R3F background change */}
       {/* <color args={['#4E4040']} attach="background" /> */}
@@ -79,8 +82,9 @@ function Canvas() {
         <BoyRoom />
       </Suspense> */}
       {/* <PointerEvents /> */}
-      <PostProcessing />
-      {showPerf ? <Perf position="top-left" /> : null}
+      {/* <PostProcessing /> */}
+      <Portfolio />
+      {/* {showPerf ? <Perf position="top-left" /> : null} */}
     </ThreeCanvas>
   );
 }
