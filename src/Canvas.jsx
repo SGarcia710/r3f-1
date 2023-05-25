@@ -14,6 +14,7 @@ import { Suspense } from 'react';
 import PointerEvents from './components/PointerEvents';
 import PostProcessing from './components/PostProcessing';
 import Portfolio from './components/Portfolio';
+import Physics from './components/Physics';
 
 /**
  * React Three Fiber handles pixel ratio automatically
@@ -39,9 +40,9 @@ const created = ({ gl, scene }) => {
 };
 
 function Canvas() {
-  // const { showPerf } = useControls({
-  //   showPerf: true,
-  // });
+  const { showPerf } = useControls({
+    showPerf: true,
+  });
 
   return (
     <ThreeCanvas
@@ -62,9 +63,9 @@ function Canvas() {
       camera={{
         // zoom: 100,
         fov: 45, // not used for orthographic camera
-        // near: 0.1,
-        // far: 2000,
-        position: [-3, 1.5, 4],
+        near: 0.1,
+        far: 200,
+        position: [4, 2, 6],
       }}
       // onPointerMissed={() => {
       //   console.log('click  outside the canvas');
@@ -83,8 +84,9 @@ function Canvas() {
       </Suspense> */}
       {/* <PointerEvents /> */}
       {/* <PostProcessing /> */}
-      <Portfolio />
-      {/* {showPerf ? <Perf position="top-left" /> : null} */}
+      {/* <Portfolio /> */}
+      <Physics />
+      {showPerf ? <Perf position="top-left" /> : null}
     </ThreeCanvas>
   );
 }
