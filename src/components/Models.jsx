@@ -20,6 +20,10 @@ const Models = () => {
         shadow-normalBias={0.04}
       />
       <ambientLight intensity={0.5} />
+      <mesh position-z={-2}>
+        <boxGeometry />
+        <meshStandardMaterial color="tomato" wireframe />
+      </mesh>
 
       <Suspense fallback={<Placeholder />}>
         <ModelWithFiber />

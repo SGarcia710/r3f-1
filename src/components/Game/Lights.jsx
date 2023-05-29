@@ -1,7 +1,21 @@
+import { useFrame } from '@react-three/fiber';
+import { useRef } from 'react';
+
 export default function Lights() {
+  const light = useRef();
+
+  useFrame((state) => {
+    light.current.position.z = state.camera.position.z + 1 - 4;
+    light.current.target.position.z = state.camera.position.z - 4;
+    // Since the target is not in the scene, this wont be updated.
+    // So we have to update the matrix world from threejs in order
+    // to reflect new values
+    light.current.target.updateMatrixWorld();
+  });
   return (
     <>
       <directionalLight
+        ref={light}
         castShadow
         position={[4, 4, 1]}
         intensity={1.5}

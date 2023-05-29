@@ -8,22 +8,22 @@ const Bounds = ({ length = 2 }) => {
       <mesh
         geometry={BOX_GEOMETRY}
         material={WALL_MATERIAL}
-        position={[2 + 0.15, 1.5 - 0.2, -length * 2 + 2]}
-        scale={[0.3, 3, 4 * length]}
+        position={[2 + 0.15, 0.75 - 0.2, -length * 2 + 2]}
+        scale={[0.3, 1.5, 4 * length]}
         castShadow
       />
       <mesh
         geometry={BOX_GEOMETRY}
         material={WALL_MATERIAL}
-        position={[-2 - 0.15, 1.5 - 0.2, -length * 2 + 2]}
-        scale={[0.3, 3, 4 * length]}
+        position={[-2 - 0.15, 0.75 - 0.2, -length * 2 + 2]}
+        scale={[0.3, 1.5, 4 * length]}
         receiveShadow
       />
       <mesh
         geometry={BOX_GEOMETRY}
         material={WALL_MATERIAL}
-        position={[0, 1.5 - 0.2, -length * 4 + 2 - 0.15]}
-        scale={[4, 3, 0.3]}
+        position={[0, 0.75 - 0.2, -length * 4 + 2 - 0.15]}
+        scale={[4, 1.5, 0.3]}
         receiveShadow
       />
 

@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 
 export default ({ position }) => {
-  const model = useGLTF('./hamburger.glb');
+  const model = useGLTF('./FullChest.gltf');
   const chest = useRef();
 
   model.scene.children.forEach((mesh) => {
@@ -18,7 +18,7 @@ export default ({ position }) => {
       ref={chest}
       object={model.scene}
       position={position}
-      scale={0.2}
+      scale={0.8}
     />
   );
 };

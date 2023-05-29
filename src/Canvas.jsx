@@ -16,6 +16,8 @@ import PostProcessing from './components/PostProcessing';
 import Portfolio from './components/Portfolio';
 import Physics from './components/Physics';
 import Game from './components/Game';
+import { KeyboardControls } from '@react-three/drei';
+import UI from './components/Game/UI';
 
 /**
  * React Three Fiber handles pixel ratio automatically
@@ -27,6 +29,17 @@ import Game from './components/Game';
  * and 3 pixels on the y axis in a single pixel... so
  * this device will render 9 pixels per each pixel, and
  * this can be a problem when we talk about 3D.
+ */
+
+/**
+ * KeyboardControls can recieve w or KeyW as the key to listen.
+ * The difference is w will refer to the actual w key, it'll
+ * respect the keyboard keyboard's layout.
+ *
+ * While KeyW will always follow the QWERTY layout, meaning that
+ * even on a AZERTY keyboard, the W will be triggered when the user
+ * press the Z key.
+ *
  */
 
 // Change background color using Threejs natively
@@ -41,55 +54,66 @@ const created = ({ gl, scene }) => {
 };
 
 function Canvas() {
-  const { showPerf } = useControls({
-    showPerf: true,
-  });
+  // const { showPerf } = useControls({
+  //   showPerf: true,
+  // });
 
   return (
-    <ThreeCanvas
-      // flat
-      shadows
-      //onCreated={created}
-      //dpr={1} // Pixel ratio. All devices will use 1px as pixel ratio. we can use a an array to provide a range. i.e.: [1,2] this is the default value from R3F
-      // flat //toneMapping // default tone mapping is ACESFilmicToneMapping
-      // orthographic // how to use another camera
-      // gl={
-      //   {
-      //     // antialias: false, //default true
-      //     // toneMapping: THREE.CineonToneMapping, // manual way to provide an specific or custom toneMapping
-      //     // Default color Encoding is THREE.sRGBEncoding
-      //     // Default renderer's background is transparent
-      //   }
-      // }
-      camera={{
-        // zoom: 100,
-        fov: 45, // not used for orthographic camera
-        near: 0.1,
-        far: 200,
-        position: [2.5, 4, 6],
-      }}
-      // onPointerMissed={() => {
-      //   console.log('click  outside the canvas');
-      // }}
+    <KeyboardControls
+      map={[
+        { name: 'forward', keys: ['ArrowUp', 'KeyW'] },
+        { name: 'backward', keys: ['ArrowDown', 'KeyS'] },
+        { name: 'leftward', keys: ['ArrowLeft', 'KeyA'] },
+        { name: 'rightward', keys: ['ArrowRight', 'KeyD'] },
+        { name: 'jump', keys: ['Space'] },
+      ]}
     >
-      {/* R3F background change */}
-      {/* <color args={['#4E4040']} attach="background" /> */}
-      {/* <Experience /> */}
-      {/* <EnvironmentAndStaging /> */}
-      {/* <StageScene /> */}
-      {/* <Models /> */}
-      {/* <ThreeText /> */}
-      {/* <Portal /> */}
-      {/* <Suspense>
+      <ThreeCanvas
+        // flat
+        shadows
+        //onCreated={created}
+        //dpr={1} // Pixel ratio. All devices will use 1px as pixel ratio. we can use a an array to provide a range. i.e.: [1,2] this is the default value from R3F
+        // flat //toneMapping // default tone mapping is ACESFilmicToneMapping
+        // orthographic // how to use another camera
+        // gl={
+        //   {
+        //     // antialias: false, //default true
+        //     // toneMapping: THREE.CineonToneMapping, // manual way to provide an specific or custom toneMapping
+        //     // Default color Encoding is THREE.sRGBEncoding
+        //     // Default renderer's background is transparent
+        //   }
+        // }
+        camera={{
+          // zoom: 100,
+          fov: 45, // not used for orthographic camera
+          near: 0.1,
+          far: 200,
+          position: [2.5, 4, 6],
+        }}
+        // onPointerMissed={() => {
+        //   console.log('click  outside the canvas');
+        // }}
+      >
+        {/* R3F background change */}
+        {/* <color args={['#4E4040']} attach="background" /> */}
+        {/* <Experience /> */}
+        {/* <EnvironmentAndStaging /> */}
+        {/* <StageScene /> */}
+        {/* <Models /> */}
+        {/* <ThreeText /> */}
+        {/* <Portal /> */}
+        {/* <Suspense>
         <BoyRoom />
       </Suspense> */}
-      {/* <PointerEvents /> */}
-      {/* <PostProcessing /> */}
-      {/* <Portfolio /> */}
-      {/* <Physics /> */}
-      <Game />
-      {showPerf ? <Perf position="top-left" /> : null}
-    </ThreeCanvas>
+        {/* <PointerEvents /> */}
+        {/* <PostProcessing /> */}
+        {/* <Portfolio /> */}
+        {/* <Physics /> */}
+        <Game />
+        {/* {showPerf ? <Perf position="top-left" /> : null} */}
+      </ThreeCanvas>
+      <UI />
+    </KeyboardControls>
   );
 }
 

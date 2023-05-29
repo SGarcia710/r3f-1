@@ -1,5 +1,5 @@
 import { useFrame } from '@react-three/fiber';
-import { CuboidCollider, RigidBody } from '@react-three/rapier';
+import { RigidBody } from '@react-three/rapier';
 import React, { useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import Hamburger from './Hamburger';
@@ -10,10 +10,25 @@ import {
   FLOOR_2_MATERIAL,
   OBSTACLE_MATERIAL,
 } from './Constants';
+import { Float, Text } from '@react-three/drei';
 
 export const StartBlock = ({ position = [0, 0, 0] }) => {
   return (
     <group position={position}>
+      <Float floatIntensity={0.25} rotationIntensity={0.25}>
+        <Text
+          maxWidth={0.25}
+          lineHeight={0.75}
+          textAlign="right"
+          position={[0.65, 0.75, 0]}
+          scale={0.3}
+          font="./bangers-v20-latin-regular.woff"
+          rotation-y={-0.35}
+        >
+          Marble race
+          <meshBasicMaterial toneMapped={false} />
+        </Text>
+      </Float>
       <mesh
         geometry={BOX_GEOMETRY}
         material={FLOOR_1_MATERIAL}
@@ -160,6 +175,11 @@ export const TrapBlockWall = ({ position = [0, 0, 0] }) => {
 export const EndBlock = ({ position = [0, 0, 0] }) => {
   return (
     <group position={position}>
+      <Text position={[0, 1.65, 2]} font="./bangers-v20-latin-regular.woff">
+        FINISH
+        <meshBasicMaterial toneMapped={false} />
+      </Text>
+
       <mesh
         geometry={BOX_GEOMETRY}
         material={FLOOR_1_MATERIAL}
@@ -168,15 +188,7 @@ export const EndBlock = ({ position = [0, 0, 0] }) => {
         receiveShadow
       />
 
-      <Hamburger position={[position[0], position[1] + 1, 0]} />
-      <RigidBody
-        type="fixed"
-        restitution={0.2}
-        friction={0}
-        position={[0, 0 + 0.6, 0 - 0.25]}
-      >
-        <CuboidCollider args={[2, 0.5, 0.1]} />
-      </RigidBody>
+      <Hamburger position={[0, 0.5, 0]} />
     </group>
   );
 };
@@ -184,6 +196,7 @@ export const EndBlock = ({ position = [0, 0, 0] }) => {
 export const Level = ({
   count = 8,
   types = [TrapBlockSpinner, TrapBlockLimbo, TrapBlockWall],
+  seed = 0,
 }) => {
   const blocks = useMemo(() => {
     const _blocks = [];
@@ -194,7 +207,7 @@ export const Level = ({
     }
 
     return _blocks;
-  }, [count, types]);
+  }, [count, types, seed]);
 
   return (
     <>
